@@ -1,0 +1,17 @@
+$color: (
+  myYellow: #ffd366,
+  btnActive: #dea821,
+  blackGray: #424242,
+  lightGray: rgb(245, 245, 245),
+  great: #86d73f,
+  lightWeight: #31baf9,
+  overHeavy: #ff982d,
+  littleHeavy: #ff6c03,
+  middleHeavy: #ff6c03,
+  heavy: #ff1200
+);
+$font: 12px, 18px, 20px, 24px, 32px;
+
+@function color($type) {
+  @return map-get($color, $type);
+}

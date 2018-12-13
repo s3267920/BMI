@@ -1,0 +1,187 @@
+@import '_reset.scss';
+@import '_style.scss';
+a {
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: color(blackGray);
+  .icon {
+    width: 117px;
+    height: 117px;
+    background-image: url(../img/BMICLogo.png);
+    background-position: center;
+    margin-right: 97px;
+  }
+  .information {
+    margin-right: 53px;
+    label {
+      color: color(myYellow);
+      display: flex;
+      flex-direction: column;
+      font-size: nth($font, 3);
+    }
+    input {
+      width: 250px;
+      box-sizing: border-box;
+      font-size: nth($font, 4);
+      line-height: 40px;
+      margin-top: 7px;
+      margin-bottom: 20px;
+      padding-left: 16px;
+      border: 2px solid color(myYellow);
+      border-radius: 10px;
+      background-color: adjust-color(color(blackGray), $lightness: 10%);
+      outline: none;
+
+      &::placeholder {
+        color: adjust-color(gray, $lightness: 20%);
+      }
+      &:focus {
+        box-shadow: 0 0 8px color(myYellow);
+      }
+    }
+  }
+  .calculatorBtn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: nth($font, 4);
+    background-color: color(myYellow);
+    color: color(blackGray);
+    box-shadow: none;
+    outline: none;
+    &:hover {
+      box-shadow: 0 0 20px #ffc432;
+    }
+    &:active {
+      background-color: color(btnActive);
+      box-shadow: none;
+    }
+  }
+  .result {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: nth($font, 4);
+    color: color(great);
+    position: relative;
+    background-color: color(blackGray);
+    border: 6px solid color(great);
+    outline: none;
+    > span {
+      position: absolute;
+      bottom: 0px;
+      right: -5px;
+      width: 30px;
+      height: 30px;
+      background-color: color(great);
+      background-image: url(../img/icons_loop.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 50%;
+      border: 3px solid color(blackGray);
+    }
+    &:hover {
+      box-shadow: none;
+    }
+    &:active {
+      background-color: none;
+      box-shadow: none;
+    }
+  }
+  .result_text {
+    color: color(great);
+    font-size: nth($font, 5);
+    margin-left: 18px;
+  }
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: color(lightGray);
+  h2 {
+    font-size: nth($font, 4);
+    color: color(blackGray);
+    margin-top: 48px;
+    margin-bottom: 20px;
+  }
+  #BMI_list {
+    width: 624px;
+    min-height: 300px;
+    margin-bottom: 74px;
+    > li {
+      height: 62px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+      background-color: white;
+    }
+    .status_color {
+      width: 1.12%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 62px;
+      background-color: color(great);
+      transition: width 1s ease;
+      a {
+        opacity: 0;
+        color: #fff;
+        font-weight: bold;
+        transition: opacity 0.5s ease-in-out;
+      }
+      &:hover {
+        width: 15%;
+        a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .option {
+    width: 617px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    > li {
+      display: flex;
+      align-items: center;
+      font-size: nth($font, 3);
+      span {
+        font-size: nth($font, 1);
+        margin-right: 7px;
+      }
+    }
+    .status {
+      margin-right: 30px;
+    }
+    .date {
+      font-size: nth($font, 1);
+    }
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: color(myYellow);
+  .footer_icon {
+    width: 55px;
+    height: 55px;
+    background-color: color(blackGray);
+    mask-image: url(../img/BMICLogo.png);
+    mask-position: center;
+    mask-size: contain;
+  }
+}
