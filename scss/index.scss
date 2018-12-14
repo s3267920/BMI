@@ -1,9 +1,14 @@
 @import '_reset.scss';
 @import '_style.scss';
+
+body {
+  width: 1024px;
+}
 a {
   text-decoration: none;
 }
 header {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,5 +199,28 @@ footer {
     mask-image: url(../img/BMICLogo.png);
     mask-position: center;
     mask-size: contain;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    min-width: 500px;
+  }
+  header {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    .information {
+      input {
+        width: 250px;
+        font-size: nth($font, 5);
+      }
+    }
   }
 }

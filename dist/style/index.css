@@ -469,11 +469,16 @@ template {
   display: none;
 }
 
+body {
+  width: 1024px;
+}
+
 a {
   text-decoration: none;
 }
 
 header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -779,5 +784,33 @@ footer .footer_icon {
           mask-position: center;
   -webkit-mask-size: contain;
           mask-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    min-width: 500px;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 600px;
+  }
+  header .information input {
+    width: 250px;
+    font-size: 32px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
