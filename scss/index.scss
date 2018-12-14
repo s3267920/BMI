@@ -36,7 +36,7 @@ header {
       border-radius: 10px;
       background-color: adjust-color(color(blackGray), $lightness: 10%);
       outline: none;
-
+      color: color(myYellow);
       &::placeholder {
         color: adjust-color(gray, $lightness: 20%);
       }
@@ -52,6 +52,7 @@ header {
     font-size: nth($font, 4);
     background-color: color(myYellow);
     color: color(blackGray);
+    border: none;
     box-shadow: none;
     outline: none;
     &:hover {
@@ -72,7 +73,7 @@ header {
     background-color: color(blackGray);
     border: 6px solid color(great);
     outline: none;
-    > span {
+    > .loopIcon {
       position: absolute;
       bottom: 0px;
       right: -5px;
@@ -84,6 +85,7 @@ header {
       background-position: center center;
       border-radius: 50%;
       border: 3px solid color(blackGray);
+      cursor: pointer;
     }
     &:hover {
       box-shadow: none;
@@ -91,6 +93,15 @@ header {
     &:active {
       background-color: none;
       box-shadow: none;
+    }
+    .BMI_value {
+      display: flex;
+      flex-direction: column;
+      color: color(great);
+      font-size: nth($font, 5);
+      span {
+        font-size: 14px;
+      }
     }
   }
   .result_text {

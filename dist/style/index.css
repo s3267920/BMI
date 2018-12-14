@@ -524,6 +524,7 @@ header .information input {
   border-radius: 10px;
   background-color: #5c5c5c;
   outline: none;
+  color: #ffd366;
 }
 
 header .information input::-webkit-input-placeholder {
@@ -554,6 +555,7 @@ header .calculatorBtn {
   font-size: 24px;
   background-color: #ffd366;
   color: #424242;
+  border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
@@ -582,7 +584,7 @@ header .result {
   outline: none;
 }
 
-header .result > span {
+header .result > .loopIcon {
   position: absolute;
   bottom: 0px;
   right: -5px;
@@ -594,6 +596,7 @@ header .result > span {
   background-position: center center;
   border-radius: 50%;
   border: 3px solid #424242;
+  cursor: pointer;
 }
 
 header .result:hover {
@@ -605,6 +608,22 @@ header .result:active {
   background-color: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+header .result .BMI_value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #86d73f;
+  font-size: 32px;
+}
+
+header .result .BMI_value span {
+  font-size: 14px;
 }
 
 header .result_text {

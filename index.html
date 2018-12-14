@@ -15,14 +15,17 @@
         <label for="height">身高 cm <input type="text" id="height" placeholder="請輸入身高"/></label>
         <label for="weight">體重 kg <input type="text" id="weight" placeholder="請輸入體重"/></label>
       </div>
-      <button class="calculatorBtn ">看結果<span></span></button>
+      <button id="calculatorBtn" class="calculatorBtn ">
+        <p class="BMI_value">看結果</p>
+        <span class="loopIcon"></span>
+      </button>
       <div class="result_text"></div>
     </header>
     <div id="content">
       <h2>BMI紀錄</h2>
       <ul id="BMI_list">
         <li>
-          <div class="status_color"><a href="" class="delete">刪除</a></div>
+          <div class="status_color"><a href="javascript:;" class="delete">刪除</a></div>
           <ul class="option">
             <li class="status">理想</li>
             <li class="BMI"><span>BMI</span>20.90</li>
