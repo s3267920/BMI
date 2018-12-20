@@ -473,6 +473,18 @@ body {
   width: 1024px;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    min-width: 500px;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -490,6 +502,21 @@ header {
           align-items: center;
   height: 300px;
   background-color: #424242;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 600px;
+  }
 }
 
 header .icon {
@@ -553,6 +580,17 @@ header .information input:focus {
           box-shadow: 0 0 8px #ffd366;
 }
 
+@media screen and (max-width: 600px) {
+  header .information label {
+    font-size: 24px;
+  }
+  header .information input {
+    width: 300px;
+    line-height: 60px;
+    font-size: 32px;
+  }
+}
+
 header .calculatorBtn {
   width: 120px;
   height: 120px;
@@ -575,6 +613,14 @@ header .calculatorBtn:active {
   background-color: #dea821;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media screen and (max-width: 600px) {
+  header .calculatorBtn {
+    width: 200px;
+    height: 200px;
+    font-size: 32px;
+  }
 }
 
 header .result {
@@ -784,33 +830,5 @@ footer .footer_icon {
           mask-position: center;
   -webkit-mask-size: contain;
           mask-size: contain;
-}
-
-@media screen and (min-width: 1024px) {
-  body {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  body {
-    min-width: 500px;
-  }
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 600px;
-  }
-  header .information input {
-    width: 250px;
-    font-size: 32px;
-  }
 }
 /*# sourceMappingURL=index.css.map */

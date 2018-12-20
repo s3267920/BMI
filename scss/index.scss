@@ -3,6 +3,12 @@
 
 body {
   width: 1024px;
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    min-width: 500px;
+  }
 }
 a {
   text-decoration: none;
@@ -14,6 +20,14 @@ header {
   align-items: center;
   height: 300px;
   background-color: color(blackGray);
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+  }
   .icon {
     width: 117px;
     height: 117px;
@@ -49,6 +63,16 @@ header {
         box-shadow: 0 0 8px color(myYellow);
       }
     }
+    @media screen and (max-width: 600px) {
+      label {
+        font-size: nth($font, 4);
+      }
+      input {
+        width: 300px;
+        line-height: 60px;
+        font-size: nth($font, 5);
+      }
+    }
   }
   .calculatorBtn {
     width: 120px;
@@ -66,6 +90,11 @@ header {
     &:active {
       background-color: color(btnActive);
       box-shadow: none;
+    }
+    @media screen and (max-width: 600px) {
+      width: 200px;
+      height: 200px;
+      font-size: nth($font, 5);
     }
   }
   .result {
@@ -199,28 +228,5 @@ footer {
     mask-image: url(../img/BMICLogo.png);
     mask-position: center;
     mask-size: contain;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  body {
-    min-width: 500px;
-  }
-  header {
-    display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    .information {
-      input {
-        width: 250px;
-        font-size: nth($font, 5);
-      }
-    }
   }
 }
